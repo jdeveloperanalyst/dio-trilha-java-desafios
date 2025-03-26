@@ -1,8 +1,6 @@
-import org.w3c.dom.ls.LSOutput;
-
 import java.util.Scanner;
 
-public class contaTerminal {
+public class ContaTerminal {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
