@@ -1,4 +1,6 @@
 package dev.jon.desafio.aplicativos.recursos.apps;
 
-public class AparelhoTelefonico {
+public interface AparelhoTelefonico {
+    public void fazerChamada();
+    public void atenderChamada();
 }

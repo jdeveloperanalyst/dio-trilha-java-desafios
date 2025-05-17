@@ -1,4 +1,9 @@
-package dev.jon.desafio.aplicativos.recursos.apps;
+    package dev.jon.desafio.aplicativos.recursos.apps;
 
-public class ReprodutorMusical {
-}
+    import dev.jon.desafio.aplicativos.Musica;
+
+    public interface ReprodutorMusical {
+        public void tocar();
+        public void pausar();
+        public void selecionarMusica();
+    }
