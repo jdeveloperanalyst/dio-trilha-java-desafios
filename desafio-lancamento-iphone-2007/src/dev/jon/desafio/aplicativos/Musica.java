@@ -7,16 +7,16 @@ public class Musica implements ReprodutorMusical {
 
     @Override
     public void tocar() {
-        System.out.println("TOCANDO MUSICA");
+        System.out.println("[App Música] TOCANDO MUSICA...");
     }
 
     @Override
     public void pausar() {
-        System.out.println("PAUSANDO MUSICA");
+        System.out.println("[App Música] PAUSANDO MUSICA...");
     }
 
     @Override
     public void selecionarMusica() {
-        System.out.println("TOCANDO MUSICA");
+        System.out.println("[App Música] SELECIONANDO MUSICA...");
     }
 }
