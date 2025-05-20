@@ -6,11 +6,11 @@ public class Telefone implements AparelhoTelefonico {
 
     @Override
     public void fazerChamada() {
-        System.out.println("FAZENDO CHAMADA");
+        System.out.println("[App Telefone] FAZENDO CHAMADA");
     }
 
     @Override
     public void atenderChamada() {
-        System.out.println("ATENDENDO CHAMADA");
+        System.out.println("[App Telefone] ATENDENDO CHAMADA");
     }
 }
