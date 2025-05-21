@@ -6,11 +6,11 @@ public class Safari implements NavegadorInternet {
 
     @Override
     public void adicionarNovaAba() {
-        System.out.println("ADICIONANDO NOVA ABA");
+        System.out.println("[App Safari] ADICIONANDO NOVA ABA");
     }
 
     @Override
     public void atualizarPagina() {
-        System.out.println("ATUALIZANDO PAGINA");
+        System.out.println("[App Safari] ATUALIZANDO PAGINA");
     }
 }
