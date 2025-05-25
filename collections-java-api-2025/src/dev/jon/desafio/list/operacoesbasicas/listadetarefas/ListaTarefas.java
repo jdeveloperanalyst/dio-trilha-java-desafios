@@ -1,7 +1,5 @@
 package dev.jon.desafio.list.operacoesbasicas.listadetarefas;
 
-import com.sun.source.tree.WhileLoopTree;
-
 import java.util.ArrayList;
 import java.util.List;
 

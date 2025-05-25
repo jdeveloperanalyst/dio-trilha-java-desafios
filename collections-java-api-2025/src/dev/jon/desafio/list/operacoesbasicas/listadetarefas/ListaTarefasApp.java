@@ -1,6 +1,6 @@
 package dev.jon.desafio.list.operacoesbasicas.listadetarefas;
 
-public class app {
+public class ListaTarefasApp {
     public static void main(String[] args) {
         ListaTarefas lista = new ListaTarefas();
 
