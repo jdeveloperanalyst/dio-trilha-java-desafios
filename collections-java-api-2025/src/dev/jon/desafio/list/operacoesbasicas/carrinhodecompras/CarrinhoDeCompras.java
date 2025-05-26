@@ -11,13 +11,15 @@ public class CarrinhoDeCompras {
     }
 
     public void adicionarItem(String nome, double preco, int quantidade){
-        for(Item i : listaCompas){
-            if(i.getNome().equalsIgnoreCase(nome)){
-                listaCompas.set(2, i + 1);
-            }else{
-                listaCompas.add(new Item(nome, preco, quantidade));
+        for (int i = 0; i < listaCompas.size(); i++) {
+            Item item = listaCompas.get(i);
+            if (item.getNome().equalsIgnoreCase(nome)) {
+                int novaQuantidade = item.getQuantidade() + quantidade;
+                listaCompas.set(i, new Item(nome, preco, novaQuantidade));
+                return;
             }
         }
+        listaCompas.add(new Item(nome, preco, quantidade));
     }
 
     public void removerItem(String nome, int quantidade){
