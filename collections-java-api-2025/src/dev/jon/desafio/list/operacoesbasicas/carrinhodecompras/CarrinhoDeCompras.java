@@ -4,29 +4,35 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class CarrinhoDeCompras {
-    List<Item> listaCompas;
+    List<Item> listaCompras;
 
     public CarrinhoDeCompras() {
-        this.listaCompas = new ArrayList<>();
+        this.listaCompras = new ArrayList<>();
     }
 
     public void adicionarItem(String nome, double preco, int quantidade){
-        for (int i = 0; i < listaCompas.size(); i++) {
-            Item item = listaCompas.get(i);
+        for (int i = 0; i < listaCompras.size(); i++) {
+            Item item = listaCompras.get(i);
             if (item.getNome().equalsIgnoreCase(nome)) {
                 int novaQuantidade = item.getQuantidade() + quantidade;
-                listaCompas.set(i, new Item(nome, preco, novaQuantidade));
+                listaCompras.set(i, new Item(nome, preco, novaQuantidade));
                 return;
             }
         }
-        listaCompas.add(new Item(nome, preco, quantidade));
+        listaCompras.add(new Item(nome, preco, quantidade));
     }
 
-    public void removerItem(String nome, int quantidade){
-
+    public void removerItem(String nome){
+        for (int i = 0; i < listaCompras.size(); i++) {
+            Item item = listaCompras.get(i);
+            if (item.getNome().equalsIgnoreCase(nome)){
+                listaCompras.remove(item);
+                return;
+            }
+        }
     }
 
     public void exibirItens(){
-        System.out.println(listaCompas);
+        System.out.println(listaCompras);
     }
 }

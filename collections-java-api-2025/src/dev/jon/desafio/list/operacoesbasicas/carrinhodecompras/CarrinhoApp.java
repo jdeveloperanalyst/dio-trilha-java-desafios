@@ -7,7 +7,14 @@ public class CarrinhoApp {
         CarrinhoDeCompras listaCompras = new CarrinhoDeCompras();
 
         listaCompras.adicionarItem("Chocolate", 7.40, 1);
+        listaCompras.adicionarItem("Açucar", 5.70, 1);
+        listaCompras.adicionarItem("Café", 36.90, 1);
 
         listaCompras.exibirItens();
+
+        listaCompras.removerItem("Açucar");
+
+        listaCompras.exibirItens();
+
     }
 }
