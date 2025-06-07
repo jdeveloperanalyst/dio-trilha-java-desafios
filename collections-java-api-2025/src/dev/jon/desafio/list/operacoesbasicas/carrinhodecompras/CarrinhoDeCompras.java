@@ -33,7 +33,6 @@ public class CarrinhoDeCompras {
     }
 
     public void calcularValorTotal(){
-        //TO-DO
         List<Float> listaValores = new ArrayList<>();
         for (Item item : listaCompras) {
             float valores = (float) item.getPreco() * item.getQuantidade();
