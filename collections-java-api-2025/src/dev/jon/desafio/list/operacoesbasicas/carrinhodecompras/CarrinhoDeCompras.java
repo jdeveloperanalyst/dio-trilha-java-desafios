@@ -32,11 +32,10 @@ public class CarrinhoDeCompras {
         }
     }
 
-    public float calcularValorTotal(){
+    public void calcularValorTotal(){
         //TO-DO
         List<Float> listaValores = new ArrayList<>();
-        for (int i = 0; i < listaCompras.size(); i++) {
-            Item item = listaCompras.get(i);
+        for (Item item : listaCompras) {
             float valores = (float) item.getPreco() * item.getQuantidade();
             listaValores.add(valores);
         }
@@ -44,8 +43,7 @@ public class CarrinhoDeCompras {
         for (Float valor : listaValores) {
             valorTotal += valor;
         }
-        System.out.println(String.format("Valor Total R$%.2f ", valorTotal));
-        return valorTotal;
+        System.out.printf("Valor Total R$%.2f %n", valorTotal);
     }
 
     public void exibirItens(){
