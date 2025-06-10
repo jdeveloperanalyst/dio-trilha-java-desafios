@@ -1,4 +1,4 @@
-package dev.jon.desafio.list.operacoesbasicas.catalogodelivros;
+package dev.jon.desafio.list.pesquisa.catalogodelivros;
 
 public class Livro {
     private final String titulo;

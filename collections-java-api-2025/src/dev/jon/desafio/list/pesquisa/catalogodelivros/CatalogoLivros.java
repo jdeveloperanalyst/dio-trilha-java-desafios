@@ -1,4 +1,4 @@
-package dev.jon.desafio.list.operacoesbasicas.catalogodelivros;
+package dev.jon.desafio.list.pesquisa.catalogodelivros;
 
 import java.util.ArrayList;
 import java.util.List;

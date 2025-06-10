@@ -1,4 +1,4 @@
-package dev.jon.desafio.list.operacoesbasicas.somasumeros;
+package dev.jon.desafio.list.pesquisa.somasumeros;
 
 public class SomaNumerosApp {
     public static void main(String[] args) {

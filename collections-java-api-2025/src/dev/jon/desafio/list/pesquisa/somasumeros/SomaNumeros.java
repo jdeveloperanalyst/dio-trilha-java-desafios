@@ -1,4 +1,4 @@
-package dev.jon.desafio.list.operacoesbasicas.somasumeros;
+package dev.jon.desafio.list.pesquisa.somasumeros;
 
 import java.util.ArrayList;
 import java.util.List;
