@@ -23,6 +23,4 @@ public class OrdenacaoPessoasApp {
         listPessoas.ordenarPorAltura();
         listPessoas.exibirPessoas();
     }
-
-
 }
