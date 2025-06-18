@@ -1,6 +1,7 @@
 package dev.jon.desafio.list.ordenacao.ordenacaodepessoas;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class OrdenacaoPessoasApp {
@@ -18,7 +19,9 @@ public class OrdenacaoPessoasApp {
         listPessoas.ordenarPorIdade();
         listPessoas.exibirPessoas();
 
-
+        System.out.println("\nORDENANDO POR ALTURA:");
+        listPessoas.ordenarPorAltura();
+        listPessoas.exibirPessoas();
     }
 
 
