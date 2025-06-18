@@ -28,8 +28,6 @@ public class Pessoa implements Comparable<Pessoa>{
         return this.idade - outraPessoa.idade;
     }
 
-
-
     @Override
     public String toString() {
         return "Pessoa{" +
