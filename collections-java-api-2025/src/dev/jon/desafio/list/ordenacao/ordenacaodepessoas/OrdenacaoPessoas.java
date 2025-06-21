@@ -5,7 +5,7 @@ import java.util.Collections;
 import java.util.List;
 
 public class OrdenacaoPessoas {
-    List<Pessoa> pessoasList;
+    private final List<Pessoa> pessoasList;
 
     public OrdenacaoPessoas() {
         this.pessoasList = new ArrayList<>();
@@ -15,12 +15,16 @@ public class OrdenacaoPessoas {
         pessoasList.add(new Pessoa(nome, idade, altura));
     }
 
-    public void ordenarPorIdade() {
-        Collections.sort(pessoasList);
+    public List<Pessoa> ordenarPorIdade() {
+        List<Pessoa> pessoasPorIdade = new ArrayList<>(pessoasList);
+        Collections.sort(pessoasPorIdade);
+        return pessoasPorIdade;
     }
 
-    public void ordenarPorAltura(){
-        Collections.sort(pessoasList, new CompararPorAltura());
+    public List<Pessoa> ordenarPorAltura(){
+        List<Pessoa> pessoasPorAltura = new ArrayList<>(pessoasList);
+        pessoasPorAltura.sort(new CompararPorAltura());
+        return pessoasPorAltura;
     }
 
     public void exibirPessoas(){

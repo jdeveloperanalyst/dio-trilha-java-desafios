@@ -16,11 +16,9 @@ public class OrdenacaoPessoasApp {
         listPessoas.exibirPessoas();
 
         System.out.println("\nORDENANDO POR IDADE:");
-        listPessoas.ordenarPorIdade();
-        listPessoas.exibirPessoas();
+        System.out.println(listPessoas.ordenarPorIdade());
 
         System.out.println("\nORDENANDO POR ALTURA:");
-        listPessoas.ordenarPorAltura();
-        listPessoas.exibirPessoas();
+        System.out.println(listPessoas.ordenarPorAltura());
     }
 }
