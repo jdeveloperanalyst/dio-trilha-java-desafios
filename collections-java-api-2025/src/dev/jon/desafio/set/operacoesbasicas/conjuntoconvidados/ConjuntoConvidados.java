@@ -30,10 +30,6 @@ public class ConjuntoConvidados {
     }
 
     public void exibirConvidados() {
-        if(!convidadosSet.isEmpty()) {
-            System.out.println(convidadosSet);
-        }else {
-            System.out.println("NÃO EXISTE CONVIDADOS NO MOMENTO");
-        }
+        System.out.println(convidadosSet);
     }
 }

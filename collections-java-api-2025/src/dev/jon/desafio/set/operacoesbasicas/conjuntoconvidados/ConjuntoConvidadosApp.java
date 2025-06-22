@@ -7,9 +7,10 @@ public class ConjuntoConvidadosApp {
     public static void main(String[] args) {
         ConjuntoConvidados conjuntoConvidados = new ConjuntoConvidados();
 
-        conjuntoConvidados.exibirConvidados();
+        System.out.println("Existem " + conjuntoConvidados.contarConvidados() + " convidado(s) dentro do Set de Convidados");
 
         conjuntoConvidados.adicionarConvidado("Jonatas Oliveira", 1);
+        conjuntoConvidados.adicionarConvidado("Jonatas Silva", 1);
         conjuntoConvidados.adicionarConvidado("Carla Rafaela", 2);
         conjuntoConvidados.adicionarConvidado("José Carlos", 3);
         conjuntoConvidados.adicionarConvidado("Homem Aranha", 4);
