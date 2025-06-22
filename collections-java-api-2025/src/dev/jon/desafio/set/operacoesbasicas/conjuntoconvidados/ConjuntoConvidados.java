@@ -15,12 +15,14 @@ public class ConjuntoConvidados {
     }
 
     public void removerConvidadoPorCodigoConvite(int codigoConvite){
+        Convidado convidadoPararemover = null;
         for(Convidado convidado : convidadosSet) {
             if(convidado.getCodigoConvite() == codigoConvite) {
-                convidadosSet.remove(convidado);
+                convidadoPararemover = convidado;
                 break;
             }
         }
+        convidadosSet.remove(convidadoPararemover);
     }
 
     public int contarConvidados() {
