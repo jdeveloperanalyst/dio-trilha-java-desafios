@@ -10,13 +10,30 @@ public class ConjuntoConvidados {
         this.convidadosSet = new HashSet<>();
     }
 
-    public void adicionarConvidado(String nome, int codigoConvite){
+    public void adicionarConvidado(String nome, int codigoConvite) {
         convidadosSet.add(new Convidado(nome, codigoConvite));
     }
 
-    public void exibirConvidados(){
-        for(Convidado nome : convidadosSet){
-            System.out.println(nome.getNome());
+    public void removerConvidadoPorCodigoConvite(int codigoConvite){
+        for(Convidado convidado : convidadosSet) {
+            if(convidado.getCodigoConvite() == codigoConvite) {
+                convidadosSet.remove(convidado);
+                break;
+            }
+        }
+    }
+
+    public int contarConvidados() {
+        return convidadosSet.size();
+    }
+
+    public void exibirConvidados() {
+        if(!convidadosSet.isEmpty()) {
+            for (Convidado convidado : convidadosSet) {
+                System.out.println(convidado.getNome());
+            }
+        }else {
+            System.out.println("NÃO EXISTE CONVIDADOS NO MOMENTO");
         }
     }
 }
