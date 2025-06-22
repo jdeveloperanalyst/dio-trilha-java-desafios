@@ -31,9 +31,7 @@ public class ConjuntoConvidados {
 
     public void exibirConvidados() {
         if(!convidadosSet.isEmpty()) {
-            for (Convidado convidado : convidadosSet) {
-                System.out.println(convidado.getNome());
-            }
+            System.out.println(convidadosSet);
         }else {
             System.out.println("NÃO EXISTE CONVIDADOS NO MOMENTO");
         }
