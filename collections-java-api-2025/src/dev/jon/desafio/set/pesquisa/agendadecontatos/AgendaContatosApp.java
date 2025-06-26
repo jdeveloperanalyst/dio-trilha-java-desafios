@@ -10,10 +10,11 @@ public class AgendaContatosApp {
         System.out.println("\nADICIONANDO CONTATO A AGENDA");
         agendaContatos.adicionarContato("Pedro", 111111111);
         agendaContatos.adicionarContato("Maria", 222222222);
+        agendaContatos.adicionarContato("Maria Cecilia", 333333333);
 
         System.out.println("\nPESQUISANDO NOME NA AGENDA");
-        agendaContatos.pesquisarPorNome("Maria");
-        agendaContatos.pesquisarPorNome("João");
+        System.out.println(agendaContatos.pesquisarPorNome("Maria"));
+        System.out.println(agendaContatos.pesquisarPorNome("João"));
 
         System.out.println("\nAGENDA ATUAL");
         agendaContatos.exibirContatos();

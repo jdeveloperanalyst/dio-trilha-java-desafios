@@ -2,9 +2,10 @@ package dev.jon.desafio.set.pesquisa.agendadecontatos;
 
 import java.sql.SQLOutput;
 import java.util.HashSet;
+import java.util.Set;
 
 public class AgendaContatos {
-    private HashSet<Contato> agendaContatos;
+    private Set<Contato> agendaContatos;
 
     public AgendaContatos() {
         this.agendaContatos = new HashSet<>();
@@ -18,42 +19,51 @@ public class AgendaContatos {
         System.out.println(agendaContatos);
     }
 
-    public void pesquisarPorNome(String nome) {
+    public Set<Contato> pesquisarPorNome(String nome) {
+        Set<Contato> contatosPorNome = new HashSet<>();
         if(!agendaContatos.isEmpty()) {
-            boolean findContato = false;
+            System.out.println("\n[DEBUG] - PESQUISANDO " + nome + "...");
+            boolean findContatoPorNome = false;
+            for(Contato contato : agendaContatos) {
+                if(contato.getNome().startsWith(nome)) {
+                    findContatoPorNome = true;
+                    contatosPorNome.add(contato);
+                }
+            }
 
+            if(!findContatoPorNome) {
+                System.out.println("[INFO] - CONTATO " + nome + ", NÃO EXISTE NA AGENDA");
+            }
+        }else {
+            System.out.println("\n[INFO] - LISTA DE CONTATOS VAZIA");
+        }
+        return contatosPorNome;
+    }
+
+    public Contato atualizarNumeroContato(String nome, int novoNumero) {
+        if(!agendaContatos.isEmpty()) {
+            Contato contatoAtualizado = null;
+            boolean findContato = false;
             for(Contato contato : agendaContatos) {
                 if(contato.getNome().equalsIgnoreCase(nome)) {
                     findContato = true;
-                    System.out.println("[DEBUG] - PESQUISANDO " + nome + "...");
-                    System.out.println(contato);
+                    System.out.println("[DEBUG] - NÚMERO ANTIGO do " + nome + " - " + contato.getNumeroTelefone());
+
+                    contato.setNumeroTelefone(novoNumero);
+                    contatoAtualizado = contato;
+
+                    System.out.println("[DEBUG] - NOVO NÚMERO do " + nome + " - " + contato.getNumeroTelefone());
                     break;
                 }
             }
 
             if(!findContato) {
-                System.out.println("\n[INFO] - CONTATO " + nome + ", NÃO EXISTE NA AGENDA");
+                System.out.println("\n[INFO] - CONTATO " + nome + ", NÃO EXISTE NA AGENDA PARA SER ATUALIZADO");
             }
-        }
-    }
-
-    public void atualizarNumeroContato(String nome, int novoNumero) {
-        if(!agendaContatos.isEmpty()) {
-            boolean findContato = false;
-            for(Contato contato : agendaContatos) {
-                if(contato.getNome().equals(nome)) {
-                    findContato = true;
-                    agendaContatos.remove(contato);
-                    agendaContatos.add(new Contato(nome, novoNumero));
-
-                    System.out.println("[DEBUG] - NÚMERO ANTIGO - " + contato.getNumeroTelefone());
-                    System.out.println("[DEBUG] - NOVO NÚMERO - " + novoNumero);
-                    break;
-                }
-            }
-            if(!findContato) {
-                System.out.println("\n[INFO] - CONTATO " + nome + ", NÃO EXISTE NA AGENDA");
-            }
+            return contatoAtualizado;
+        }else {
+            System.out.println("\n[INFO] - LISTA DE CONTATOS VAZIA");
+            return null;
         }
     }
 
