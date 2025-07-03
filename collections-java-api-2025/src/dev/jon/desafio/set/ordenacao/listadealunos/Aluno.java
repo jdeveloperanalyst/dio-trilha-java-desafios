@@ -2,7 +2,7 @@ package dev.jon.desafio.set.ordenacao.listadealunos;
 
 import java.util.Objects;
 
-public class Aluno {
+public class Aluno implements Comparable<Aluno>{
     private final String nome;
     private final long matricula;
     private final double nota;
@@ -35,6 +35,11 @@ public class Aluno {
     @Override
     public int hashCode() {
         return Objects.hash(getNome(), getMatricula());
+    }
+
+    @Override
+    public int compareTo(Aluno aluno) {
+        return this.nome.compareTo(aluno.nome);
     }
 
     @Override
