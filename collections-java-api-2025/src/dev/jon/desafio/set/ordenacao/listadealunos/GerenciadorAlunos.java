@@ -36,6 +36,10 @@ public class GerenciadorAlunos {
         System.out.println(alunosPorNome);
     }
 
+    public void exibirAlunosPorNota() {
+        //TO DO - implementar Comparator<>
+    }
+
     public void exibirAlunos() {
         System.out.println(alunosList);
     }
