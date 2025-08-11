@@ -37,7 +37,9 @@ public class GerenciadorAlunos {
     }
 
     public void exibirAlunosPorNota() {
-        //TO DO - implementar Comparator<>
+        List<Aluno> alunosPorNota = new ArrayList<>(alunosList);
+        Collections.sort(alunosPorNota, new ComparadorPorNota());
+        System.out.println(alunosPorNota);
     }
 
     public void exibirAlunos() {
